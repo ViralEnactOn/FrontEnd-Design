@@ -24,7 +24,14 @@ module.exports = {
         NONSELECTED: 'var(--main-70, #ACB0BB)',
         FONT: 'var(--main-80, #74747C)',
         DESCRIPTION: 'var(--main-60, #B7BBC4)',
-        VIOLET: 'var(--purple-10, #F4F5FD)'
+        VIOLET: 'var(--purple-10, #F4F5FD)',
+        TEXTVIOLET: 'rgba(171, 178, 245, 1)',
+        BORDER: 'var(--purple-60, #939CEF)',
+        VIOLETBG: 'var(--purple-60, #939CEF)',
+        WHITE: 'var(--main-white, #FFF)',
+        LIGHTVIOLET: 'var(--purple-30, #EFF0FD)',
+        BACKGROUND: '#F2F7FB',
+        PUREWHITE : '#FFF'
       },
       gap: {
         20: '72px',
@@ -32,11 +39,19 @@ module.exports = {
       },
       width: {
         464: '464px',
-        466: '466px'
+        466: '466px',
+        423: '423px',
+        290: '290px',
+        96: '96px',
+        286: '286px'
       },
       height: {
         208: '208px',
-        357: '357px'
+        357: '357px',
+        2: '2px',
+        94: '94px',
+        32: '32px',
+        61: '61px'
       }
     }
   },
