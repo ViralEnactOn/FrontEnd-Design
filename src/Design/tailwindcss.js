@@ -156,7 +156,7 @@ function tailwindcss () {
                   </div>
                   <input
                     type='text'
-                    className='w-80 h-10 rounded-3xl px-8 placeholder-slate-400 opacity-40'
+                    className='w-80 h-10 rounded-3xl px-8  opacity-10'
                     placeholder='Search online stores'
                   />
                 </div>
@@ -221,7 +221,7 @@ function tailwindcss () {
               <div className='ml-5 font-bold text-3xl text-LIGHTGRAY tracking-widest absolute'>
                 Categories
               </div>
-              <div className='flex mt-6 gap-20'>
+              <div className='flex mt-7 gap-20 absolute'>
                 {/* Travel */}
                 <div
                   className='h-16 w-24 rounded-lg'
@@ -375,12 +375,12 @@ function tailwindcss () {
               </div>
             </div>
 
-            {/* Fourth Block */}
-            <div className='flex flex-wrap mt-20 rounded-lg'>
+            {/* Four Block */}
+            <div className='flex flex-wrap mt-40 rounded-lg'>
               <div className='ml-5 font-bold text-3xl text-LIGHTGRAY tracking-widest absolute'>
                 Featured offers
               </div>
-              <div className='flex mt-6 gap-25'>
+              <div className='flex mt-7 gap-25 '>
                 {/* Adidas */}
                 <div
                   className='h-44 w-44 rounded-3xl shadow-#BECAD9 justify-between '
@@ -604,10 +604,10 @@ function tailwindcss () {
               <div className='ml-5 font-bold text-3xl text-LIGHTGRAY tracking-widest absolute'>
                 Store rates
               </div>
-              <div className='flex flex-row justify-between pt-7'>
-                <div className='w-464 h-208 bg-white rounded-lg'>
+              <div className='flex flex-row justify-between pt-7 relative'>
+                <div className='w-464 h-208 bg-PUREWHITE rounded-lg'>
                   <Tab.Group>
-                    <Tab.List className='flex rounded-full bg-gray-100 m-2  '>
+                    <Tab.List className='flex rounded-full bg-PUREWHITE m-2  '>
                       {Object.keys(categories).map(category => (
                         <Tab
                           key={category}
@@ -658,7 +658,7 @@ function tailwindcss () {
                     </Tab.Panels>
                   </Tab.Group>
                 </div>
-                <div className='w-466 h-357 bg-VIOLET rounded-lg'>
+                <div className='w-466 h-357 bg-PUREWHITE rounded-lg'>
                   {/* First Block */}
                   <div className='flex flex-col h-1/5 mt-3'>
                     <div className='flex justify-between'>
@@ -804,12 +804,12 @@ function tailwindcss () {
               </div>
             </div>
 
-            {/* Sixth Block */}
+            {/* Six Block */}
             <div className='flex flex-wrap mt-20 rounded-lg'>
               <div className='ml-5 font-bold text-3xl text-LIGHTGRAY tracking-widest absolute'>
                 Other Adidas offers
               </div>
-              <div className='flex mt-6 w-full justify-between col-3'>
+              <div className='flex mt-7 w-full justify-between col-3 relative'>
                 {/* First Offer */}
                 <div
                   className='h-94 w-290 rounded-3xl shadow-#BECAD9 justify-between '
