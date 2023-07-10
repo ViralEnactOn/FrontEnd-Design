@@ -31,7 +31,7 @@ module.exports = {
         WHITE: 'var(--main-white, #FFF)',
         LIGHTVIOLET: 'var(--purple-30, #EFF0FD)',
         BACKGROUND: '#F2F7FB',
-        PUREWHITE : '#FFF'
+        PUREWHITE: '#FFF'
       },
       gap: {
         20: '72px',

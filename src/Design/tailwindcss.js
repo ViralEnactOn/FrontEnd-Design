@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from 'react'
 import '../CSS/input.css'
 import EnactOnLogo from '../Logo/enactOn.png'
@@ -38,7 +39,13 @@ function classNames (...classes) {
 }
 
 function tailwindcss () {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen1, setIsOpen1] = useState(false)
+  const [isOpen2, setIsOpen2] = useState(false)
+  const [isOpen3, setIsOpen3] = useState(false)
+  const [isOpen4, setIsOpen4] = useState(false)
+  const [isOpen5, setIsOpen5] = useState(false)
+
   let [categories] = useState({
     Recent: [
       {
@@ -89,6 +96,61 @@ function tailwindcss () {
       }
     ]
   })
+
+  const first = () => {
+    setIsOpen(false)
+    setIsOpen1(!isOpen1)
+    setIsOpen2(false)
+    setIsOpen3(false)
+    setIsOpen4(false)
+    setIsOpen5(false)
+  }
+
+  const second = () => {
+    setIsOpen2(!isOpen2)
+    setIsOpen(false)
+    setIsOpen1(false)
+    setIsOpen3(false)
+    setIsOpen4(false)
+    setIsOpen5(false)
+  }
+
+  const third = () => {
+    setIsOpen3(!isOpen3)
+    setIsOpen(false)
+    setIsOpen1(false)
+    setIsOpen2(false)
+    setIsOpen4(false)
+    setIsOpen5(false)
+  }
+
+  const four = () => {
+    setIsOpen4(!isOpen4)
+    setIsOpen(false)
+    setIsOpen1(false)
+    setIsOpen2(false)
+    setIsOpen3(false)
+    setIsOpen5(false)
+  }
+
+  const five = () => {
+    setIsOpen(!isOpen)
+    setIsOpen1(false)
+    setIsOpen2(false)
+    setIsOpen3(false)
+    setIsOpen4(false)
+    setIsOpen5(false)
+  }
+
+  const six = () => {
+    setIsOpen5(!isOpen5)
+    setIsOpen(false)
+    setIsOpen1(false)
+    setIsOpen2(false)
+    setIsOpen3(false)
+    setIsOpen4(false)
+  }
+
   return (
     <>
       <div
@@ -144,7 +206,7 @@ function tailwindcss () {
 
           <div className='p-20 '>
             {/* First Block */}
-            <div className='flex justify-between'>
+            <div className='flex justify-between '>
               <div>
                 <div className='relative block'>
                   <div className='absolute inset-y-0 left-0 flex items-center pl-3'>
@@ -174,7 +236,7 @@ function tailwindcss () {
             </div>
 
             {/* Second Block */}
-            <div className='relative block mt-20 bg-white rounded-lg'>
+            <div className='relative block mt-20 bg-white rounded-lg drop-shadow-2xl shadow-#BECAD9'>
               <div className='flex justify-between'>
                 <div className='w-1/2 pl-20 self-center'>
                   <div className='flex text-SUBBLUE text-2xl font-semibold tracking-widest'>
@@ -217,7 +279,7 @@ function tailwindcss () {
             </div>
 
             {/* Third Block */}
-            <div className='flex flex-wrap mt-20 rounded-lg'>
+            <div className='flex flex-wrap mt-20 rounded-lg '>
               <div className='ml-5 font-bold text-3xl text-LIGHTGRAY tracking-widest absolute'>
                 Categories
               </div>
@@ -383,13 +445,13 @@ function tailwindcss () {
               <div className='flex mt-7 gap-25 '>
                 {/* Adidas */}
                 <div
-                  className='h-44 w-44 rounded-3xl shadow-#BECAD9 justify-between '
+                  className='h-44 w-44 rounded-3xl shadow-#BECAD9 justify-between drop-shadow-2xl '
                   style={{
                     background: 'var(--main-white, #FFF)'
                   }}
                 >
                   <div className='flex flex-col absolute'>
-                    <div className='self-center'>
+                    <div className='self-center '>
                       <img
                         src={Rectangle}
                         className='h-24 w-44'
@@ -427,7 +489,7 @@ function tailwindcss () {
 
                 {/* Bond */}
                 <div
-                  className='h-44 w-44 rounded-3xl shadow-#BECAD9 justify-between'
+                  className='h-44 w-44 rounded-3xl shadow-#BECAD9 justify-between drop-shadow-2xl'
                   style={{
                     background: 'var(--main-white, #FFF)'
                   }}
@@ -471,7 +533,7 @@ function tailwindcss () {
 
                 {/* Groupon */}
                 <div
-                  className='h-44 w-44 rounded-3xl shadow-#BECAD9 justify-between'
+                  className='h-44 w-44 rounded-3xl shadow-#BECAD9 justify-between drop-shadow-2xl'
                   style={{
                     background: 'var(--main-white, #FFF)'
                   }}
@@ -515,7 +577,7 @@ function tailwindcss () {
 
                 {/* Amazon */}
                 <div
-                  className='h-44 w-44 rounded-3xl shadow-#BECAD9 justify-between'
+                  className='h-44 w-44 rounded-3xl shadow-#BECAD9 justify-between drop-shadow-2xl'
                   style={{
                     background: 'var(--main-white, #FFF)'
                   }}
@@ -559,7 +621,7 @@ function tailwindcss () {
 
                 {/* Dell */}
                 <div
-                  className='h-44 w-44 rounded-3xl shadow-#BECAD9 justify-between'
+                  className='h-44 w-44 rounded-3xl shadow-#BECAD9 justify-between drop-shadow-2xl'
                   style={{
                     background: 'var(--main-white, #FFF)'
                   }}
@@ -605,7 +667,7 @@ function tailwindcss () {
                 Store rates
               </div>
               <div className='flex flex-row justify-between pt-7 relative'>
-                <div className='w-464 h-208 bg-PUREWHITE rounded-lg'>
+                <div className='w-464 h-208 bg-PUREWHITE rounded-lg drop-shadow-2xl shadow-#BECAD9'>
                   <Tab.Group>
                     <Tab.List className='flex rounded-full bg-PUREWHITE m-2  '>
                       {Object.keys(categories).map(category => (
@@ -658,7 +720,7 @@ function tailwindcss () {
                     </Tab.Panels>
                   </Tab.Group>
                 </div>
-                <div className='w-466 h-357 bg-PUREWHITE rounded-lg'>
+                <div className='w-466 h-357 bg-PUREWHITE rounded-lg drop-shadow-2xl shadow-#BECAD9'>
                   {/* First Block */}
                   <div className='flex flex-col h-1/5 mt-3'>
                     <div className='flex justify-between'>
@@ -812,7 +874,7 @@ function tailwindcss () {
               <div className='flex mt-7 w-full justify-between col-3 relative'>
                 {/* First Offer */}
                 <div
-                  className='h-94 w-290 rounded-3xl shadow-#BECAD9 justify-between '
+                  className='h-94 w-290 rounded-3xl shadow-#BECAD9 justify-between drop-shadow-2xl'
                   style={{
                     background: 'var(--main-white, #FFF)'
                   }}
@@ -838,12 +900,26 @@ function tailwindcss () {
                         </button>
                       </div>
                       <div className='flex self-center mt-2'>
-                        <div className='text-TEXTVIOLET text-xs self-center '>
-                          more
-                        </div>
-                        <div className='self-center ml-1'>
-                          <img src={VectorIcon} alt='Vector Logo' />
-                        </div>
+                        <button
+                          className='text-TEXTVIOLET text-xs self-center '
+                          onClick={() => {
+                            first()
+                          }}
+                        >
+                          {isOpen1 === true ? 'less' : 'more'}
+                        </button>
+                        <button
+                          className='self-center ml-1'
+                          onClick={() => {
+                            first()
+                          }}
+                        >
+                          {isOpen1 === true ? (
+                            <img src={VectorUp} alt='Vector Logo' />
+                          ) : (
+                            <img src={VectorIcon} alt='Vector Logo' />
+                          )}
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -851,7 +927,7 @@ function tailwindcss () {
 
                 {/* Second Offer */}
                 <div
-                  className='h-94 w-290 rounded-3xl shadow-#BECAD9 justify-between '
+                  className='h-94 w-290 rounded-3xl shadow-#BECAD9 justify-between drop-shadow-2xl'
                   style={{
                     background: 'var(--main-white, #FFF)'
                   }}
@@ -877,12 +953,26 @@ function tailwindcss () {
                         </button>
                       </div>
                       <div className='flex self-center mt-2'>
-                        <div className='text-TEXTVIOLET text-xs self-center '>
-                          more
-                        </div>
-                        <div className='self-center ml-1'>
-                          <img src={VectorIcon} alt='Vector Logo' />
-                        </div>
+                        <button
+                          className='text-TEXTVIOLET text-xs self-center '
+                          onClick={() => {
+                            second()
+                          }}
+                        >
+                          {isOpen2 === true ? 'less' : 'more'}
+                        </button>
+                        <button
+                          className='self-center ml-1'
+                          onClick={() => {
+                            second()
+                          }}
+                        >
+                          {isOpen2 === true ? (
+                            <img src={VectorUp} alt='Vector Logo' />
+                          ) : (
+                            <img src={VectorIcon} alt='Vector Logo' />
+                          )}
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -890,7 +980,7 @@ function tailwindcss () {
 
                 {/* Third Offer */}
                 <div
-                  className='h-94 w-290 rounded-3xl shadow-#BECAD9 justify-between '
+                  className='h-94 w-290 rounded-3xl shadow-#BECAD9 justify-between drop-shadow-2xl'
                   style={{
                     background: 'var(--main-white, #FFF)'
                   }}
@@ -916,12 +1006,22 @@ function tailwindcss () {
                         </button>
                       </div>
                       <div className='flex self-center mt-2'>
-                        <div className='text-TEXTVIOLET text-xs self-center '>
-                          more
-                        </div>
-                        <div className='self-center ml-1'>
-                          <img src={VectorIcon} alt='Vector Logo' />
-                        </div>
+                        <button
+                          className='text-TEXTVIOLET text-xs self-center '
+                          onClick={() => third()}
+                        >
+                          {isOpen3 === true ? 'less' : 'more'}
+                        </button>
+                        <button
+                          className='self-center ml-1'
+                          onClick={() => third()}
+                        >
+                          {isOpen3 === true ? (
+                            <img src={VectorUp} alt='Vector Logo' />
+                          ) : (
+                            <img src={VectorIcon} alt='Vector Logo' />
+                          )}
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -929,12 +1029,72 @@ function tailwindcss () {
               </div>
             </div>
 
+            {isOpen1 === true && (
+              <>
+                <div className='flex rounded-lg '>
+                  <div className='flex mt-1 w-full justify-start'>
+                    <div
+                      className='flex h-61 w-286 rounded-3xl shadow-#BECAD9  '
+                      style={{
+                        background: 'var(--main-white, #FFF)'
+                      }}
+                    >
+                      <div className='text-center  text-NONSELECTED text-xs self-center p-2'>
+                        Promo code is required. Excludes mobile phone and
+                        horses.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {isOpen2 === true && (
+              <>
+                <div className='flex rounded-lg '>
+                  <div className='flex mt-1 w-full justify-center'>
+                    <div
+                      className='flex h-61 w-286 rounded-3xl shadow-#BECAD9  '
+                      style={{
+                        background: 'var(--main-white, #FFF)'
+                      }}
+                    >
+                      <div className='text-center  text-NONSELECTED text-xs self-center p-2'>
+                        Promo code is required. Excludes mobile phone and
+                        horses.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {isOpen3 === true && (
+              <>
+                <div className='flex rounded-lg '>
+                  <div className='flex mt-1 w-full justify-end'>
+                    <div
+                      className='flex h-61 w-286 rounded-3xl shadow-#BECAD9  '
+                      style={{
+                        background: 'var(--main-white, #FFF)'
+                      }}
+                    >
+                      <div className='text-center  text-NONSELECTED text-xs self-center p-2'>
+                        Promo code is required. Excludes mobile phone and
+                        horses.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
+
             {/* Seven Block */}
             <div className='flex flex-wrap mt-5 rounded-lg'>
               <div className='flex mt-6 w-full justify-between col-3'>
                 {/* First Offer */}
                 <div
-                  className='h-94 w-290 rounded-3xl shadow-#BECAD9 justify-between '
+                  className='h-94 w-290 rounded-3xl shadow-#BECAD9 justify-between drop-shadow-2xl'
                   style={{
                     background: 'var(--main-white, #FFF)'
                   }}
@@ -960,12 +1120,22 @@ function tailwindcss () {
                         </button>
                       </div>
                       <div className='flex self-center mt-2'>
-                        <div className='text-TEXTVIOLET text-xs self-center '>
-                          more
-                        </div>
-                        <div className='self-center ml-1'>
-                          <img src={VectorIcon} alt='Vector Logo' />
-                        </div>
+                        <dbutton
+                          className='text-TEXTVIOLET text-xs self-center '
+                          onClick={() => four()}
+                        >
+                          {isOpen4 === true ? 'less' : 'more'}
+                        </dbutton>
+                        <button
+                          className='self-center ml-1'
+                          onClick={() => four()}
+                        >
+                          {isOpen4 === true ? (
+                            <img src={VectorUp} alt='Vector Logo' />
+                          ) : (
+                            <img src={VectorIcon} alt='Vector Logo' />
+                          )}
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -973,7 +1143,7 @@ function tailwindcss () {
 
                 {/* Second Offer */}
                 <div
-                  className='h-94 w-290 rounded-3xl shadow-#BECAD9 justify-between '
+                  className='h-94 w-290 rounded-3xl shadow-#BECAD9 justify-between drop-shadow-2xl'
                   style={{
                     background: 'var(--main-white, #FFF)'
                   }}
@@ -1007,12 +1177,26 @@ function tailwindcss () {
                       </div>
 
                       <div className='flex self-center mt-2'>
-                        <div className='text-TEXTVIOLET text-xs self-center '>
-                          less
-                        </div>
-                        <div className='self-center ml-1'>
-                          <img src={VectorUp} alt='Vector Logo' />
-                        </div>
+                        <button
+                          className='text-TEXTVIOLET text-xs self-center '
+                          onClick={() => {
+                            five()
+                          }}
+                        >
+                          {isOpen === false ? 'more' : 'less'}
+                        </button>
+                        <button
+                          className='self-center ml-1'
+                          onClick={() => {
+                            five()
+                          }}
+                        >
+                          {isOpen === false ? (
+                            <img src={VectorIcon} alt='Vector Logo' />
+                          ) : (
+                            <img src={VectorUp} alt='Vector Logo' />
+                          )}
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1020,7 +1204,7 @@ function tailwindcss () {
 
                 {/* Third Offer */}
                 <div
-                  className='h-94 w-290 rounded-3xl shadow-#BECAD9 justify-between '
+                  className='h-94 w-290 rounded-3xl shadow-#BECAD9 justify-between drop-shadow-2xl'
                   style={{
                     background: 'var(--main-white, #FFF)'
                   }}
@@ -1046,12 +1230,26 @@ function tailwindcss () {
                         </button>
                       </div>
                       <div className='flex self-center mt-2'>
-                        <div className='text-TEXTVIOLET text-xs self-center '>
-                          more
-                        </div>
-                        <div className='self-center ml-1'>
-                          <img src={VectorIcon} alt='Vector Logo' />
-                        </div>
+                        <button
+                          className='text-TEXTVIOLET text-xs self-center '
+                          onClick={() => {
+                            six()
+                          }}
+                        >
+                          {isOpen5 === true ? 'less' : 'more'}
+                        </button>
+                        <button
+                          className='self-center ml-1'
+                          onClick={() => {
+                            six()
+                          }}
+                        >
+                          {isOpen5 === true ? (
+                            <img src={VectorUp} alt='Vector Logo' />
+                          ) : (
+                            <img src={VectorIcon} alt='Vector Logo' />
+                          )}
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1059,22 +1257,71 @@ function tailwindcss () {
               </div>
             </div>
 
-            {/* Eight Block */}
-            <div className='flex flex-wrap rounded-lg'>
-              <div className='flex mt-1 w-full justify-center'>
-                {/* First Offer */}
-                <div
-                  className='flex h-61 w-286 rounded-3xl shadow-#BECAD9  '
-                  style={{
-                    background: 'var(--main-white, #FFF)'
-                  }}
-                >
-                  <div className='text-center  text-NONSELECTED text-xs self-center p-2'>
-                    Prome code is required. Excludes mobile phone and horses.
+            {isOpen === true && (
+              <>
+                {/* Eight Block */}
+                <div className='flex flex-wrap rounded-lg'>
+                  <div className='flex mt-1 w-full justify-center'>
+                    {/* First Offer */}
+                    <div
+                      className='flex h-61 w-286 rounded-3xl shadow-#BECAD9  '
+                      style={{
+                        background: 'var(--main-white, #FFF)'
+                      }}
+                    >
+                      <div className='text-center  text-NONSELECTED text-xs self-center p-2'>
+                        Promo code is required. Excludes mobile phone and
+                        horses.
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </>
+            )}
+
+            {isOpen4 === true && (
+              <>
+                {/* Eight Block */}
+                <div className='flex flex-wrap rounded-lg'>
+                  <div className='flex mt-1 w-full justify-start'>
+                    {/* First Offer */}
+                    <div
+                      className='flex h-61 w-286 rounded-3xl shadow-#BECAD9  '
+                      style={{
+                        background: 'var(--main-white, #FFF)'
+                      }}
+                    >
+                      <div className='text-center  text-NONSELECTED text-xs self-center p-2'>
+                        Promo code is required. Excludes mobile phone and
+                        horses.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {isOpen5 === true && (
+              <>
+                {/* Eight Block */}
+                <div className='flex flex-wrap rounded-lg'>
+                  <div className='flex mt-1 w-full justify-end'>
+                    {/* First Offer */}
+                    <div
+                      className='flex h-61 w-286 rounded-3xl shadow-#BECAD9  '
+                      style={{
+                        background: 'var(--main-white, #FFF)'
+                      }}
+                    >
+                      <div className='text-center  text-NONSELECTED text-xs self-center p-2'>
+                        Promo code is required. Excludes mobile phone and
+                        horses.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
