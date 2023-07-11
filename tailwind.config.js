@@ -10,28 +10,23 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        qs: ['Quicksand']
+        quickSand: ['"Quicksand", sans-serif'] //Name Change
       },
       colors: {
-        BLUE: '#4FBAE5',
-        GRAY: '#B7BBC4',
-        SUBBLUE: '#4FBAE5',
-        LIGHTGRAY: '#E3EBF4',
-        GRAY1: '#D0DDEA',
-        GRAY2: '#B7BBC4',
-        PLACEHOLDER: 'var(--main-white, #FFF)',
-        TABS: '#808BF0',
-        NONSELECTED: 'var(--main-70, #ACB0BB)',
-        FONT: 'var(--main-80, #74747C)',
-        DESCRIPTION: 'var(--main-60, #B7BBC4)',
-        VIOLET: 'var(--purple-10, #F4F5FD)',
-        TEXTVIOLET: 'rgba(171, 178, 245, 1)',
-        BORDER: 'var(--purple-60, #939CEF)',
-        VIOLETBG: 'var(--purple-60, #939CEF)',
-        WHITE: 'var(--main-white, #FFF)',
-        LIGHTVIOLET: 'var(--purple-30, #EFF0FD)',
-        BACKGROUND: '#F2F7FB',
-        PUREWHITE: '#FFF'
+        blue: '#4FBAE5',
+        gray: '#B7BBC4',
+        lightgray: '#E3EBF4',
+        gray1: '#D0DDEA',
+        tabs: '#808BF0',
+        nonSelected: '#ACB0BB',
+        font: ' #74747C',
+        violet: ' #F4F5FD',
+        textviolet: 'rgba(171, 178, 245, 1)',
+        violetbg: ' #939CEF',
+        white: ' #FFF',
+        lightviolet: '#EFF0FD',
+        background: '#F2F7FB',
+        fontgray: '#848D93'
       },
       gap: {
         20: '72px',
